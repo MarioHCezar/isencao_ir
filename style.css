@@ -242,6 +242,9 @@ form {
   padding: 15px;
 }
 
+.local-data-dec{
+ margin-top: 4.5rem;
+}
 
 label {
   display: flex;
@@ -308,31 +311,9 @@ select {
   display: none;
 }
 
-.assinatura {
-  margin-top: 2rem;
-  font-size: 1rem;
+.assinatura, .abono {
+  margin-top: 4rem;
 }
-
-.abono {
-  margin-top: 2rem;
-  font-size: 1rem;
-}
-
-/* @media html {
-  html {
-    color-scheme: dark light;
-  }
-  body {
-    max-width: 794px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    background-color: #ffffff;
-    text-align: justify;
-  }
-
-} */
-/* Estilos padrão para light mode */
 
 /* Estilos para dark mode */
 @media (prefers-color-scheme: dark) {
