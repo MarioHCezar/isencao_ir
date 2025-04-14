@@ -12,7 +12,6 @@ const pj = document.querySelector("#checkCNPJ");
 const select = document.querySelector("select");
 const matricula = document.querySelector("#matricula");
 
-
 const nome_dec = document.querySelector(".nome");
 const endereco_dec = document.querySelector(".endereco");
 const documento_dec = document.querySelector(".documento");
@@ -35,8 +34,6 @@ function checkInputs(inputs) {
     }
   });
   return filled;
-
-
 }
 
 let inputs = document.querySelectorAll("input");
@@ -49,14 +46,13 @@ inputs.forEach((input) => {
     } else {
       botao.disabled = true;
 
-      botao.classList.add("botao__disabled")
-
+      botao.classList.add("botao__disabled");
     }
   });
 });
 
 botao.addEventListener("click", (e) => {
-  e.preventDefault()
+  e.preventDefault();
   nome_dec.innerText = form.nome.value;
   endereco_dec.innerText = `${form.endereco.value}, ${form.numero.value}, ${form.bairro.value}, ${form.cidade.value}/${form.uf.value}`;
   documento_dec.innerText = form.documento.value;
@@ -82,8 +78,14 @@ botao.addEventListener("click", (e) => {
     day: "numeric",
     month: "long",
     year: "numeric",
-
   })}.`;
   matricula_dec.innerText = matricula.value;
   window.print();
+});
+
+document.addEventListener("keydown", (event) => {
+  // Verifica se Ctrl+P (ou Cmd+P no macOS) foi pressionado
+  if ((event.ctrlKey || event.metaKey) && event.key === "p") {
+    event.preventDefault(); // Impede a abertura da janela de impressão
+  }
 });

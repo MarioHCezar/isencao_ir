@@ -12,6 +12,8 @@
     <script src="extenso.js" defer></script>
     <script src="buscaCep.js" defer></script>
   </head>
+
+  <!-- To do: adicionar acessibilidade e responsividade -->
   <body>
     <div class="container">
       <h2 class="titulo">
@@ -22,11 +24,11 @@
           <div class="dados-pessoais">
             <div class="field">
               <label for="nome">Nome</label >
-              <input type="text" id="nome" name="nome" style="margin-top: 6px"/>
+              <input type="text" id="nome" name="nome" style="width: 28rem;"/>
             </div>
             <div class="field">
-              <label for="documento">
-                <select id="cpf-cnpj" >
+              <label for="documento" style="margin-bottom: 0 !important;">
+                <select id="cpf-cnpj" style="padding: 0; font-weight:bold;">
                   <option value="cpf" id="selectCPF">CPF</option>
                   <option value="cpnj" id="selectCNPJ">CNPJ</option>
                 </select>
@@ -38,11 +40,11 @@
           <div class="dados-residencia">
             <div class="field">
               <label for="cep">CEP</label>
-              <input type="text" id="cep" maxlength="9" style="width: 120px;" />
+              <input type="text" id="cep" maxlength="9" style="width: 6rem;" />
             </div>
             <div class="field">
               <label for="endereco">Endereço</label>
-              <input type="text" id="endereco" />
+              <input type="text" id="endereco" style="width: 16.2rem;" />
             </div>
             <div class="field" >
               <label for="bairro">Bairro</label>
@@ -50,11 +52,11 @@
             </div>
             <div class="field">
               <label for="cidade">Cidade</label>
-              <input type="text" id="cidade"  />
+              <input type="text" id="cidade" style="width: 20.5rem;" />
             </div>
-            <div class="field" style="margin-left: 4.4rem;">
+            <div class="field" >
               <label for="uf">UF</label>
-              <input type="text" id="uf" style="width: 50px;" />
+              <input type="text" id="uf" style="width: 1.8rem;" />
             </div>
             <div class="field">
               <label for="numero">Número</label>
@@ -65,7 +67,7 @@
           <div class="dados-processo">
             <div class="field">
               <label for="processo">Número do processo</label>
-              <input type="text" id="processo" style="width: 200px;" />
+              <input type="text" id="processo" style="width: 28rem;" />
             </div>
             <div class="field">
               <label for="vara">Vara</label>
@@ -73,7 +75,7 @@
             </div>
             <div class="field">
               <label for="secao">Seção Judiciária</label>
-              <input type="text" id="secao" style="width: 200px;"/>
+              <input type="text" id="secao" style="width: 28rem;"/>
             </div>
             <div class="field">
               <label for="valor">Valor</label>
@@ -84,7 +86,7 @@
           <div class="local-data">
             <div class="field">
               <label for="local">Local</label>
-              <input type="text" id="local" />
+              <input type="text" id="local" style="width: 28rem;"/>
             </div>
             <div class="field">
               <label for="data">Data</label>

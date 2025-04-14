@@ -127,12 +127,23 @@ html {
   color-scheme: dark light;
 }
 
-body {
+/* body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 1.2rem;
+} */
+
+/* Início teste */
+body {
+  max-width: 58.5rem;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  text-align: justify;
 }
+/* Fim teste */
 
 .container {
   text-align: center;
@@ -145,10 +156,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  background-color: rgba(143, 143, 143, 0.3);
-  padding: 15px;
-  width: 850px;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid rgb(219, 216, 216);
+  box-shadow: 0 0 1rem rgba(235, 233, 233, 0.5);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 53rem;
 }
 
 h3,
@@ -173,13 +187,14 @@ form {
 
 .dados-pessoais {
   display: flex;
-  column-gap: 100px;
+  column-gap: 4rem;
   align-items: center;
-  min-width: 850px;
-  max-width: 850px;
-  margin: 5px 0;
-  background-color: rgba(143, 143, 143, 0.3);
-  padding: 15px;
+  margin-bottom: 1rem;
+  border: 0.1rem solid rgb(219, 216, 216);
+  box-shadow: 0 0 1rem rgba(235, 233, 233, 0.5);
+  border-radius: 0.3rem;
+  padding: 1rem;
+  width: 53rem;
 }
 
 
@@ -187,12 +202,13 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  column-gap: 50px;
+  column-gap: 3.5rem;
   flex-wrap: wrap;
   min-width: 850px;
   max-width: 850px;
-  background-color: rgba(143, 143, 143, 0.3);
-  margin: 5px 0;
+  border: 0.25px solid rgb(219, 216, 216);
+  box-shadow: 0 0 10px rgba(235, 233, 233, 0.5);
+  border-radius: 5px;  margin: 5px 0;
   padding: 15px;
 }
 
@@ -201,12 +217,13 @@ form {
   display: flex;
   flex-direction: row;
   justify-content:flex-start;
-  column-gap: 150px;
+  column-gap: 3.5rem;
   flex-wrap: wrap;
   min-width: 850px;
   max-width: 850px;
-  background-color: rgba(143, 143, 143, 0.3);
-  margin: 5px 0;
+  border: 0.25px solid rgb(219, 216, 216);
+  box-shadow: 0 0 10px rgba(235, 233, 233, 0.5);
+  border-radius: 5px;  margin: 5px 0;
   padding: 15px;
 }
 
@@ -214,11 +231,13 @@ form {
   display: flex;
   flex-direction: row;
   justify-content:flex-start;
-  column-gap: 150px;
+  column-gap: 3.5rem;
   flex-wrap: wrap;
   min-width: 850px;
   max-width: 850px;
-  background-color: rgba(143, 143, 143, 0.3);
+  border: 0.25px solid rgb(219, 216, 216);
+  box-shadow: 0 0 10px rgba(235, 233, 233, 0.5);
+  border-radius: 5px;
   margin: 5px 0;
   padding: 15px;
 }
@@ -228,6 +247,7 @@ label {
   display: flex;
   font-size: 1.2rem;
   padding-right: 10px;
+  margin-bottom: 0.2rem;
 }
 
 form input {
@@ -240,6 +260,8 @@ form input {
 }
 
 .botao {
+  justify-self: center;
+  align-items: center;
   margin-top: 1rem;
   padding: 1rem;
   font-size: 1.2rem;
@@ -296,9 +318,57 @@ select {
   font-size: 1rem;
 }
 
+/* @media html {
+  html {
+    color-scheme: dark light;
+  }
+  body {
+    max-width: 794px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    text-align: justify;
+  }
+
+} */
+/* Estilos padrão para light mode */
+
+/* Estilos para dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #212121;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+
+  input, select{
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+  }
+
+  .titulo,.dados-pessoais, .dados-residencia,.dados-processo,.local-data{
+    box-shadow: none;
+  }
+}
+
+
 @media print {
   html {
     color-scheme: light;
+  }
+
+  body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    box-shadow: none;
+  }
+
+  .titulo {
+    border: none;
+    box-shadow: none;
   }
 
   .container_dec {
