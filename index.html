@@ -11,86 +11,92 @@
     <script src="masks.js" defer></script>
     <script src="extenso.js" defer></script>
     <script src="buscaCep.js" defer></script>
-
   </head>
   <body>
     <div class="container">
-      <h2  class="titulo">Preencha os campos para gerar declaração de isenção</h2>
+      <h2 class="titulo">
+        Preencha os campos para gerar declaração de isenção
+      </h2>
       <form action="">
         <div class="form">
-          <div class="field">
-            <label for="nome">Nome</label>
+          <div class="dados-pessoais">
+            <div class="field">
+              <label for="nome">Nome</label >
+              <input type="text" id="nome" name="nome" style="margin-top: 6px"/>
+            </div>
+            <div class="field">
+              <label for="documento">
+                <select id="cpf-cnpj" >
+                  <option value="cpf" id="selectCPF">CPF</option>
+                  <option value="cpnj" id="selectCNPJ">CNPJ</option>
+                </select>
+              </label>
+              <input type="text" id="documento" class="pf-pj" maxlength="14" style="width: 200px;" />
+            </div>
+          </div>
 
-            <input type="text" id="nome" name="nome" />
+          <div class="dados-residencia">
+            <div class="field">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" maxlength="9" style="width: 120px;" />
+            </div>
+            <div class="field">
+              <label for="endereco">Endereço</label>
+              <input type="text" id="endereco" />
+            </div>
+            <div class="field" >
+              <label for="bairro">Bairro</label>
+              <input type="text" id="bairro" />
+            </div>
+            <div class="field">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade"  />
+            </div>
+            <div class="field" style="margin-left: 4.4rem;">
+              <label for="uf">UF</label>
+              <input type="text" id="uf" style="width: 50px;" />
+            </div>
+            <div class="field">
+              <label for="numero">Número</label>
+              <input type="text" id="numero" style="width: 100px;"/>
+            </div>
           </div>
-          <div class="field">
-            <label for="cep">CEP</label>
-            <input type="text" id="cep" maxlength="9" />
 
+          <div class="dados-processo">
+            <div class="field">
+              <label for="processo">Número do processo</label>
+              <input type="text" id="processo" style="width: 200px;" />
+            </div>
+            <div class="field">
+              <label for="vara">Vara</label>
+              <input type="text" id="vara" style="width: 200px;" />
+            </div>
+            <div class="field">
+              <label for="secao">Seção Judiciária</label>
+              <input type="text" id="secao" style="width: 200px;"/>
+            </div>
+            <div class="field">
+              <label for="valor">Valor</label>
+              <input type="text" id="valor" placeholder="0,00" maxlength="14" style="width: 200px;" />
+            </div>
           </div>
-          <div class="field">
-            <label for="endereco">Endereço</label>
-            <input type="text" id="endereco" />
 
-          </div>
-          <div class="field">
-            <label for="bairro">Bairro</label>
-            <input type="text" id="bairro" />
-          </div>
-          <div class="field">
-            <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" />
-
-          </div>
-          <div class="field">
-            <label for="uf">UF</label>
-            <input type="text" id="uf" />
-          </div>
-          <div class="field">
-            <label for="numero">Número</label>
-            <input type="text" id="numero" />
-          </div>
-          <div class="field">
-            <label for="documento">
-              <select id="cpf-cnpj">
-                <option value="cpf" id="selectCPF">CPF</option>
-                <option value="cpnj" id="selectCNPJ">CNPJ</option>
-              </select>
-
-            </label>
-            <input type="text" id="documento" class="pf-pj" maxlength="14" />
-          </div>
-          <div class="field">
-
-            <label for="processo">Número do processo</label>
-            <input type="text" id="processo" />
-          </div>
-          <div class="field">
-            <label for="vara">Vara</label>
-            <input type="text" id="vara" />
-          </div>
-          <div class="field">
-            <label for="secao">Seção Judiciária</label>
-            <input type="text" id="secao" />
-          </div>
-          <div class="field">
-            <label for="valor">Valor</label>
-
-            <input type="text" id="valor" placeholder="0,00" maxlength="14" />
-
-          </div>
-          <div class="field">
-            <label for="local">Local</label>
-            <input type="text" id="local" />
-          </div>
-          <div class="field">
-            <label for="data">Data</label>
-            <input type="date" id="data" />
-          </div>
+          <div class="local-data">
+            <div class="field">
+              <label for="local">Local</label>
+              <input type="text" id="local" />
+            </div>
+            <div class="field">
+              <label for="data">Data</label>
+              <input type="date" id="data" />
+            </div>
             <div class="field">
               <label for="matricula">Matrícula</label>
               <input type="text" id="matricula" />
             </div>
+          </div>
+
+
         </div>
         <button class="botao" type="submit" disabled="disabled">
           Gerar Declaração
@@ -100,7 +106,6 @@
     <div class="container_dec">
       <h2 class="titulo">Declaração para não incidência de IRRF</h2>
       <p>
-
         <span class="nome">Nome</span>, residente ou domiciliado(a) no endereço
 
         <span class="endereco">(endereço completo)</span>, inscrito(a) no
@@ -114,12 +119,15 @@
         <span class="secao">Nome da Unidade da Federação ou do Município</span
         >pagos pelo Banco do Brasil, declara que:
       </p>
+      <br>
       <div class="opcoes">
         <div class="primeira-opcao">
           <input type="checkbox" name="opcao" id="checkCPF" /> o montante de R$
           <span class="span valor"></span>
-          (<span class="extenso">(indicação do valor por extenso)</span>)
-          com acréscimos legais constitui rendimento isento ou não-tributável.
+          (<span class="extenso">(indicação do valor por extenso)</span>) com
+          acréscimos legais constitui rendimento isento ou não-tributável.
+          <br>
+          <br>
           <div class="segunda-opcao">
             <input type="checkbox" name="opcao" id="checkCNPJ" />
             está inscrita no Sistema Integrado de Pagamento de Impostos e
